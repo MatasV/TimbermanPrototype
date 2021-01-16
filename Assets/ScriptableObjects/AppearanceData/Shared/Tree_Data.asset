@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a55d3943645c4a368afb09c69db1fdaa, type: 3}
+  m_Name: Tree_Data
+  m_EditorClassIdentifier: 
+  NeutralTrunk: {fileID: 6624155977942371636, guid: 26452453e3b952343bf2c9d2c740dfbb,
+    type: 3}
+  LeftTrunk: {fileID: 3176244021594717969, guid: 3dfdaa61a5146274db5f0692af8e71f1,
+    type: 3}
+  RightTrunk: {fileID: 7651618645670202839, guid: 43465adf695d78341affa50fedb70b42,
+    type: 3}
