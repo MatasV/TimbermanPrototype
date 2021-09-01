@@ -6,12 +6,34 @@ using UnityEngine;
 
 public class DisplayAndChangeBoolSetting : MonoBehaviour
 {
+    public static float musicVolume { get; private set; }
+    public static float SFXVolume { get; private set; }
+
     [SerializeField] private BoolSetting setting;
     [SerializeField] private TMP_Text settingsDisplay;
+
     private void Start()
     {
         setting.onValueChanged.AddListener(UpdateSettingDisplay);
         setting.Load();
+    }
+
+    public void OnMusicSliderValueChange()
+    {
+        if (setting.key == "Music" && !setting.Value) { musicVolume = 1; }
+        else { musicVolume = 0.0001f; }
+
+        FindObjectOfType<Camera>().GetComponent<AudioStarter>().audioManager.UpdateMixerVolume();
+        ChangeSetting();
+    }
+
+    public void OnSFXSliderValueChange()
+    {
+        if (setting.key == "Sound" && !setting.Value) { SFXVolume = 1; }
+        else { SFXVolume = 0.0001f; }
+        
+        FindObjectOfType<Camera>().GetComponent<AudioStarter>().audioManager.UpdateMixerVolume();
+        ChangeSetting();
     }
 
     public void ChangeSetting()

@@ -18,3 +18,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 476b34f5ae65ec945ad3c990cce58514, type: 2}
   - {fileID: 11400000, guid: 1645198f155abf34ba3b07906dab5e4b, type: 2}
   mixer: {fileID: 24100000, guid: df0aea718bf1b5441b61577bedba2313, type: 2}
+  musicMixerGroup: {fileID: 7201220600668431099, guid: df0aea718bf1b5441b61577bedba2313,
+    type: 2}
+  SFXMixerGroup: {fileID: -646234553736720726, guid: df0aea718bf1b5441b61577bedba2313,
+    type: 2}

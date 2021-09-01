@@ -981,7 +981,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 529688077}
-        m_MethodName: ChangeSetting
+        m_MethodName: OnSFXSliderValueChange
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3308,13 +3308,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1617129885}
-        m_MethodName: ChangeSetting
+        m_MethodName: OnMusicSliderValueChange
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 0
+          m_FloatArgument: 0.0001
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2

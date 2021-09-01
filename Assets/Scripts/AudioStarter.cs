@@ -5,10 +5,12 @@ using UnityEngine;
 
 public class AudioStarter : MonoBehaviour
 {
-    [SerializeField] private AudioManager audioManager;
+    public AudioManager audioManager;
+
     [SerializeField] private string AudioName;
     [SerializeField] private bool IsMusic;
     [SerializeField] private bool onStart;
+
     private void Start()
     {
         if (!onStart) return;

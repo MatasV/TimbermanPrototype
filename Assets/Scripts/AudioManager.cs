@@ -10,9 +10,10 @@ public class AudioManager : ScriptableObject
     [SerializeField] private Audio[] effects;
     
     [Header("References")]
-    [SerializeField]
-    private AudioMixer mixer;
-    
+    [SerializeField] private AudioMixer mixer;
+    [SerializeField] private AudioMixerGroup musicMixerGroup;
+    [SerializeField] private AudioMixerGroup SFXMixerGroup;
+
     public void PlayMusic(string name)
     {
         for (int i = 0; i < music.Length; i++)
@@ -99,5 +100,11 @@ public class AudioManager : ScriptableObject
         }
 
         Debug.Log("AudioManager: " + name + " not found in list.");
+    }
+
+    public void UpdateMixerVolume()
+    {
+        musicMixerGroup.audioMixer.SetFloat("Music Volume", Mathf.Log10(DisplayAndChangeBoolSetting.musicVolume) * 20);
+        SFXMixerGroup.audioMixer.SetFloat("SFX Volume", Mathf.Log10(DisplayAndChangeBoolSetting.SFXVolume) * 20);
     }
 }
